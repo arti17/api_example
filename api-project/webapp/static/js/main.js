@@ -18,13 +18,13 @@ sum.on('click', function () {
         success: function (response) {
             answer.removeClass('alert-danger')
             answer.addClass('alert-success')
-            res = response.answer
+            const res = response.answer
             answer.text('Answer: ' + res)
         },
         error: function (response) {
             answer.addClass('alert-danger')
             const message = response.responseText
-            err = JSON.parse(message)
+            const err = JSON.parse(message)
             answer.text(err.error)
         }
     });
@@ -40,13 +40,13 @@ subtract.on('click', function () {
         success: function (response) {
             answer.removeClass('alert-danger')
             answer.addClass('alert-success')
-            res = response.answer
+            const res = response.answer
             answer.text('Answer: ' + res)
         },
         error: function (response) {
             answer.addClass('alert-danger')
             const message = response.responseText
-            err = JSON.parse(message)
+            const err = JSON.parse(message)
             answer.text(err.error)
         }
     });
@@ -68,7 +68,7 @@ multiply.on('click', function () {
         error: function (response) {
             answer.addClass('alert-danger')
             const message = response.responseText
-            err = JSON.parse(message)
+            const err = JSON.parse(message)
             answer.text(err.error)
         }
     });
@@ -82,7 +82,7 @@ divide.on('click', function () {
         contentType: "application/json",
         data: JSON.stringify({A: A.val(), B: B.val()}),
         success: function (response) {
-            res = response.answer
+            const res = response.answer
             answer.removeClass('alert-danger')
             answer.addClass('alert-success')
             answer.text('Answer: ' + res)
@@ -90,7 +90,7 @@ divide.on('click', function () {
         error: function (response) {
             answer.addClass('alert-danger')
             const message = response.responseText
-            err = JSON.parse(message)
+            const err = JSON.parse(message)
             answer.text(err.error)
         }
     });
