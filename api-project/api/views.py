@@ -98,7 +98,7 @@ def divide_view(request, *args, **kwargs):
             A = request_data.get('A')
             B = request_data.get('B')
 
-            if B == 0:
+            if B == '0' or B == 0:
                 return error_func(400, 'Division by zero!')
 
             if check_func(A, B):

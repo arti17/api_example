@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,9 +6,32 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <title>Client</title>
 </head>
 <body>
-    <h2>Worked</h2>
+<br>
+<div class="container">
+    <h3 class="text-center">Enter two numbers</h3>
+    <div class="row">
+        <div class="col-3 offset-3">
+            <input type="text" class="form-control" id="a" placeholder="A">
+        </div>
+        <div class="col-3">
+            <input type="text" class="form-control" id="b" placeholder="B">
+        </div>
+    </div>
+    <div class="btn-group mt-2 col-4 offset-4" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-success" id="sum">add</button>
+        <button type="button" class="btn btn-danger" id="subtract">subtract</button>
+        <button type="button" class="btn btn-primary" id="multiply">multiply</button>
+        <button type="button" class="btn btn-secondary" id="divide">divide</button>
+    </div>
+        <div class="alert text-center mt-2 col-4 offset-4" role="alert" id="answer">
+
+    </div>
+</div>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
